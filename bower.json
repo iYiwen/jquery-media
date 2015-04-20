@@ -1,0 +1,8 @@
+{
+  "name": "jquery-media",
+  "version": "1.0.0",
+  "auther": "Zed",
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}

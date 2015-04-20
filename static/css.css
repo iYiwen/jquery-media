@@ -1,0 +1,144 @@
+.player {
+    min-height: 300px;
+    overflow: hidden;
+}
+.screen {
+    position: relative;
+}
+.thumbnail-priv-btn, .thumbnail-next-btn, .screen-priv-btn, .screen-next-btn {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: 0.3s linear all;
+    -moz-transition:  0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition:  0.3s linear all;
+    transition:  0.3s linear all;
+}
+.thumbnail-priv-btn:after, .screen-priv-btn {
+    content: "<";
+}
+.thumbnail-next-btn:after, .screen-next-btn {
+    content: ">";
+}
+.thumbnail-priv-btn, .thumbnail-next-btn {
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    text-align: center;
+    color: #ffffff;
+    background: #cccccc;
+}
+.screen-priv-btn, .screen-next-btn {
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 45px;
+    background: #cccccc;
+}
+.screen-priv-btn, .thumbnail-priv-btn {
+    left: 0px;
+}
+.screen-next-btn, .thumbnail-next-btn {
+    right: 0px;
+}
+.music-bg {
+    background: -webkit-radial-gradient(#5E6C77, #3D4750, #262F36); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#5E6C77, #3D4750, #262F36); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#5E6C77, #3D4750, #262F36); /* Firefox 3.6 - 15 */
+    background: radial-gradient(#5E6C77, #3D4750, #262F36);
+}
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-top: 5px;
+
+}
+.btn-show .thumbnail-priv-btn,.btn-show .thumbnail-next-btn{
+    opacity: 0.8;
+    z-index: 10000;
+    -webkit-transition: 0.3s linear all;
+    -moz-transition:  0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition:  0.3s linear all;
+    transition:  0.3s linear all;
+}
+.screen-btn-show .screen-priv-btn,.screen-btn-show .screen-next-btn{
+    opacity: 0.8;
+    z-index: 10000;
+    -webkit-transition: 0.3s linear all;
+    -moz-transition:  0.3s linear all;
+    -ms-transition: 0.3s linear all;
+    -o-transition:  0.3s linear all;
+    transition:  0.3s linear all;
+}
+.thumbnail-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.thumbnail-list li {
+    position: relative;
+    list-style: none;
+    float: left;
+    cursor: pointer;
+}
+.thumbnail-list li a {
+    display: block;
+}
+.thumbnail-list li:after {
+    clear: both;
+}
+.thumbnail-list li .video-mask,.thumbnail-list li .audio-mask {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btn-bg { width: 50px; height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    border: 1px solid #CE3B4D;
+}
+.thumbnail-list li .video-mask:after {
+    color: #CE3B4D;
+    content: "▷";
+    margin-left: 10px;
+    text-shadow: 0 0 50px #ffffff;
+    font-size: 40px;
+}
+.thumbnail-list li .audio-mask:after {
+    color: #CE3B4D;
+    margin-left: 10px;
+    text-shadow: 0 0 50px rgb(253, 253, 253);
+    font-size: 48px;
+    content: "♫";
+}
+.screen-content {
+    overflow: hidden;
+}
+.screen-content img {
+    width: 100%;
+}
+.screen-content {
+    position: relative;
+}
+.screen-content audio{
+    position: absolute;
+    bottom: 0;
+}
