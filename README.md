@@ -1,5 +1,6 @@
 # jquery-media
 example :
+#script
 new MediaPlayer({
     flip : true,   //是否禁止缩略图翻页，默认为false
      data : function(callback){
