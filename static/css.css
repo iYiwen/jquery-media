@@ -56,6 +56,14 @@
     background: -o-radial-gradient(#5E6C77, #3D4750, #262F36); /* Opera 11.6 - 12.0 */
     background: -moz-radial-gradient(#5E6C77, #3D4750, #262F36); /* Firefox 3.6 - 15 */
     background: radial-gradient(#5E6C77, #3D4750, #262F36);
+    text-align: center;
+}
+.music-bg:after {
+    content: "♫";
+    font-size: 130px;
+    color: #3D4750;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #0d1114;
 }
 .thumbnail {
     position: relative;
@@ -63,6 +71,9 @@
     height: 90px;
     margin-top: 5px;
 
+}
+.flip .thumbnail-priv-btn,.flip .thumbnail-next-btn {
+    display: none;
 }
 .btn-show .thumbnail-priv-btn,.btn-show .thumbnail-next-btn{
     opacity: 0.8;

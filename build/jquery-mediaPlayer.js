@@ -4,6 +4,7 @@
  *  example :
  *
  *  new MediaPlayer({
+ *      flip : true,   //是否禁止缩略图翻页，默认为false
  *      data : function(callback){
  *          $.get("xx.com/api",function(data){
  *              callback(data)//一定要放数组
@@ -18,6 +19,7 @@
 (function ($) {
     function MediaPlayer(elm,options){
         this.$element = elm;
+        this.flip = options.flip || false;
         this.mediaMap =options.data;
         this.init();
     }
@@ -40,7 +42,7 @@
         },
         getMediaType : function (media) {
             var imgLabel = "<img src='"+media.src+"' width='100%' height='100%'>",
-                audioLabel = '<div class="music-bg" style="height: '+ this.screenHeight +'px"></div><audio controls style="width: 100%;height: 100%">'+
+                audioLabel = '<div class="music-bg" style="line-height:'+ this.screenHeight +'px;height: '+ this.screenHeight +'px"></div><audio controls style="width: 100%;height: 100%">'+
                     '<source src="'+media.src+'" type="audio/mpeg">'+
                     +'<source src="'+media.src+'" type="audio/ogg">'+
                     '<embed width="100%" src="'+media.src+'">'+
@@ -101,7 +103,9 @@
                         $(".screen").removeClass("screen-btn-show");
                     },1000)
                 });
-
+            if (this.flip) {
+                $(".thumbnail").addClass("flip");
+            }
             this.mediaMap(function (data) {
                 var oLi = "";
                 pageTotal = Math.ceil(data.length / _count);
@@ -215,7 +219,8 @@
             this.seleced(obj,index);
         },
         doMove : function (obj,playerWidth,page) {
-            var left = page*playerWidth;
+            console.log(page)
+            var left = page*playerWidth + ((page+1) * 10);
             $(obj).animate({"left":-(left)});
         }
         ,
