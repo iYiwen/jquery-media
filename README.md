@@ -1,5 +1,6 @@
 # jquery-media
 a multiMediaPlayer of jquery
+demo : [demo]: http://zedwang.github.io/jquery-media/  "demo"
 # example
 
 <pre>
