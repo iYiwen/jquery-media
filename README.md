@@ -2,7 +2,7 @@
 a multiMediaPlayer of jquery
 # example
 
-<pre>
+
     <code>
         new MediaPlayer({
             flip : true,   //是否禁止缩略图翻页，默认为false
@@ -13,5 +13,5 @@ a multiMediaPlayer of jquery
              }
         })
     </code>
-</pre>
+
 
